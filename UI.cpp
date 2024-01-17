@@ -61,7 +61,6 @@ void UI::printBoard() const
 
 void UI::run()
 {
-    game.makeMove(7, 4, 5, 4);
     while (true)
     {
         system("cls");

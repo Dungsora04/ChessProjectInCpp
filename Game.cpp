@@ -13,7 +13,6 @@ bool Game::makeMove(int startRow, int startCol, int endRow, int endCol)
 
 bool Game::makeMove(int startRow, int startCol, int endRow, int endCol, char promotionPiece)
 {
-    /*return board.makeMove(startRow, startCol, endRow, endCol, promotionPiece);*/
     ChessPiece* startPiece = gameBoard.board[startRow][startCol];
     ChessPiece* destinationPiece = gameBoard.board[endRow][endCol];
 
@@ -64,7 +63,6 @@ bool Game::makeMove(int startRow, int startCol, int endRow, int endCol, char pro
 
 bool Game::hasValidMove(bool isWhite)
 {
-    /*return board.hasValidMove(isWhite);*/
     for (int i = 0; i < 8; ++i)
     {
         for (int j = 0; j < 8; ++j)
@@ -103,7 +101,6 @@ bool Game::hasValidMove(bool isWhite)
 
 bool Game::isInCheck(bool isWhite) const
 {
-    /*return board.isInCheck(isWhite);*/
     int kingRow, kingCol;
     for (int i = 0; i < 8; ++i)
     {
@@ -137,19 +134,16 @@ bool Game::isInCheck(bool isWhite) const
 
 bool Game::isCheckmate(bool isWhite)
 {
-    /*return board.isCheckmate(isWhite);*/
     return (isInCheck(isWhite) && !hasValidMove(isWhite));
 }
 
 bool Game::isStalemate(bool isWhite)
 {
-    /* return board.isStalemate(isWhite);*/
     return (!isInCheck(isWhite) && !hasValidMove(isWhite));
 }
 
 bool Game::castling(bool isWhite, bool isKingSide)
 {
-    /* return board.castling(isWhite, isKingSide);*/
     int row = isWhite ? 0 : 7;
     int kingCol = 3;
     int rookCol = isKingSide ? 0 : 7;
