@@ -4,7 +4,6 @@
 
 ChessBoard::ChessBoard()
 {
-    //initializeBoard();
 }
 
 ChessBoard::~ChessBoard()
